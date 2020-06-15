@@ -1,0 +1,44 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            display: flex;
+            /* flex-direction: column-reverse; */
+            height: 500px;
+            width: 500px;
+            align-items: center;
+            background-color: blueviolet;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+
+        }
+        .one{
+            background-color: brown;
+            align-self: flex-start;
+        }
+        .two{
+            background-color: chartreuse;
+
+        }
+        .three{
+            background-color: coral;
+            /* 作用:设置单个子元素; 在交叉轴上对其方式; 其他元素继承 align-item */
+            align-self: flex-end;  
+        }
+    </style>
+</head>
+<body>
+    <!-- 给子元素添加的属性 -->
+    <div class="wrap">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+    </div>
+</body>
+</html>

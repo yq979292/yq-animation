@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        overflow: auto;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+      }
+      /* 隐藏滚动条 */
+      .box::-webkit-scrollbar {
+        display: none;
+      }
+      /* 横向滚动方式一 */
+      .wrap {
+        width: 100%;
+        height: 200px;
+        background-color: blueviolet;
+        overflow: auto;
+        /* 注意：对文本类 inline 元素有用的大部分对inline-block 都有效果 */
+        white-space: nowrap;
+      }
+      /* 隐藏横向滚动条 */
+      .wrap::-webkit-scrollbar{
+          display: none;
+      }
+
+      .clearfix {
+        zoom: 1;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+      .clear{
+          clear: both;
+      }
+
+      .outer{
+            height: 20%;
+            background:red;
+            display: flex;
+            overflow: auto;
+            height: 200px;
+        }
+        .outer::-webkit-scrollbar{
+            display: none;
+        }
+        .inner{
+            background:yellow;
+            height: 100%;
+            width: 30%;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>我是内容01</p>
+      <p>我是内容02</p>
+      <p>我是内容03</p>
+      <p>我是内容04</p>
+      <p>我是内容05</p>
+      <p>我是内容06</p>
+      <p>我是内容07</p>
+      <p>我是内容08</p>
+      <p>我是内容09</p>
+      <p>我是内容10</p>
+    </div>
+    <div class="clear"></div>
+
+    <!-- 横向滚动 方式一
+       父元素 定宽   white-space:nowrap 子元素定宽 overflow-y:auto 
+       隐藏滚动条
+    -->
+    <div class="wrap clearfix">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <!-- 横向滚动方式二:
+        子元素定宽 父元素宽度 auto  overflow-y:auto
+    -->
+    
+    <!-- <div class="content">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div> -->
+
+    <!-- 方式三 -->
+    <div class="outer">
+        <div class="inner size"></div>
+        <div class="inner size"></div>
+        <div class="inner size"></div>
+        <div class="inner size"></div>
+        <div class="inner size"></div>
+    </div>
+  </body>
+</html>

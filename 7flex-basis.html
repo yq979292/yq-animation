@@ -1,0 +1,44 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            display: flex;
+            /* flex-direction: column-reverse; */
+            height: 500px;
+            width: 500px;
+            background-color: blueviolet;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            flex-grow: 1;
+
+        }
+        .one{
+            background-color: brown;
+
+        }
+        .two{
+            background-color: chartreuse;
+            /* 作用 等同于设置宽度或者高度 */
+            flex-basis: 200px;
+     
+        }
+        .three{
+            background-color: coral;  
+        }
+    </style>
+</head>
+<body>
+    <!-- 给子元素添加的属性 -->
+    <div class="wrap">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+    </div>
+</body>
+</html>

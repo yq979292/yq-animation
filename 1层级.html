@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            /* 有用 */
+            /* display: flex; */
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-left: 10px;
+            /* position: relative; */
+            /* 无效 */
+            /* display: inline-block; */
+            float: left;
+            position: relative;
+
+        }
+        .red{
+            /*  注意：z-index 不适合设置块元素层级关系 */
+            z-index: 10;
+            /* position: absolute;
+            left: 0; */
+        }
+        .left{
+            margin-left: -20px;
+            margin-top: -10px;
+            background-color: blue;
+            z-index: 1;
+            /* position: absolute;
+            left: 30px; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        z-index 层级关系 解决 元素覆盖问题：
+        1 有position 属性 值不是 static
+        2 父元素为弹性盒子 的子元素 有效果
+
+        需求：既需要瞒住层级关系；有想要布局 变动最小 那么给元素添加postion :relitive
+     -->
+    <div class="wrap">
+        <div class="box red"></div>
+        <div class="box left"></div>
+    </div>
+</body>
+</html>

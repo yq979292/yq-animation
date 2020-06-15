@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 
+            注意: 函数执行顺序与 元素最总效果有关系
+            例如: 向旋转后平移 与 先评议后旋转 效果哟差别
+            
+            */
+            transform: rotate(45deg);
+            /* transition: rotate(90deg) translateX(12px); */
+            /* transform: translateX(120px)  rotate(90deg); */
+            /*
+             设置元素 基点的位置 坐标轴原点  默认在 元素中心
+             left 基点在左
+             right 基点在右
+             
+            */
+            /* transform-origin:center; */
+            /* transform-origin: left; */
+            /* transform-origin: right; */
+
+        }
+    </style>
+</head>
+<body>
+    <!--
+         每个元素本身;具有坐标轴 
+         2d  x y 
+         3d  x y z 
+         元素旋转 后 轴也会旋转
+
+         圆心点:
+
+         http://www.fly63.com/article/detial/6063?type=2
+    -->
+    <div class="box">11111</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .tabBar{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: burlywood;
+            display: flex;
+            justify-content: flex-start;
+            /* flex-wrap: wrap; */
+            
+        }
+        .tab-item{
+            width: 30%;
+            height: 20px;
+            /* 将子元素拉伸 1  默认值0 不拉伸 */
+            /* flex-grow: 1; */
+
+        }
+        .red{
+            background-color: red;
+        }
+        .yellow{
+            background-color: yellow;
+            flex-grow: 2;
+        }
+        .blue{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabBar">
+        <div class="tab-item red"></div>
+        <div class="tab-item yellow"></div>
+        <div class="tab-item blue"></div>
+    </div>
+</body>
+</html>

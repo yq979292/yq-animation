@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            display: flex;
+            /* flex-direction: column-reverse; */
+            height: 500px;
+            width: 500px;
+            background-color: blueviolet;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+
+            /* 
+            等比例拉伸: 沿着主轴方向拉伸 
+            默认:如果主轴 水平方向 拉伸宽度 如果竖直方向 拉伸[高度]
+
+            思考问题:如何既拉伸高度 有拉伸宽度
+             */
+            /* flex-grow: 1; */
+        }
+        .one{
+            background-color: brown;
+            /* 设置子元素的排列顺序 值越小越靠前[主轴起点]  */
+            order: 2;
+            flex-grow: 1;
+        }
+        .two{
+            background-color: chartreuse;
+            order: 0;
+            flex-grow: 1;
+        }
+        .three{
+            background-color: coral;
+            order: 1;
+            /* 
+            flex-grow  
+            作用:拉伸子元素  分配剩余空间  
+            将剩余空间等分为 n 分(4) 根据flow-grow 值进行分配          
+            n = flow-grow 值的和   
+             */
+            flex-grow: 2;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 给子元素添加的属性 -->
+    <div class="wrap">
+        
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+    </div>
+</body>
+</html>

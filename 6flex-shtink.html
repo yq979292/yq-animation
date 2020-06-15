@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            display: flex;
+            /* flex-direction: column-reverse; */
+            height: 500px;
+            width: 500px;
+            background-color: blueviolet;
+        }
+        .box{
+            width: 300px;
+            height: 100px;
+            /* 
+            flex-shrink
+            作用:设置子元素缩放 
+            默认值 :1  缩放
+            值: 0  不缩放;
+
+
+            设置元素挤一挤 
+            到底挤不挤;
+            看是第几;
+            0不挤,1就挤
+             */
+            /* flex-shrink: 0; */
+        }
+        .one{
+            background-color: brown;
+            /* flex-shrink: 0; */
+
+        }
+        .two{
+            background-color: chartreuse;
+            flex-shrink: 0;
+     
+        }
+        .three{
+            background-color: coral;
+    
+        }
+    </style>
+</head>
+<body>
+    <!-- 给子元素添加的属性 -->
+    <div class="wrap">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+    </div>
+</body>
+</html>
